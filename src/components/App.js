@@ -6,20 +6,22 @@ import { onAuthStateChanged, updateProfile } from "firebase/auth";
 
 
 
+
 function App() {
 
   const [init, setInit] = useState(false);
-  
+
   const [userObj, setUserObj] = useState(null);
   useEffect(() => {
     onAuthStateChanged(authService, (user) => {
       if (user) {
         setUserObj({
           displayName: user.displayName,
+          userId: user.email,
           uid: user.uid,
           updateProfile: (args) => updateProfile(user, { displayName: user.displayName }),
-          });
-      } else{
+        });
+      } else {
         setUserObj(null);
       }
       setInit(true);
@@ -31,19 +33,20 @@ function App() {
       displayName: user.displayName,
       uid: user.uid,
       updateProfile: (args) => updateProfile(user, { displayName: user.displayName }),
-      });
+    });
   };
 
 
   return (
-    <>
-      {init ? <AppRouter
+    <div className="background">
+      <div className="mainBox">
+        {init ? <AppRouter
           refreshUser={refreshUser}
           isLoggedIn={Boolean(userObj)}
           userObj={userObj}
         /> : "Initializing..."}
-
-    </>
+      </div>
+    </div>
   );
 }
 

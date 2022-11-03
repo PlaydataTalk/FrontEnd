@@ -1,277 +1,568 @@
 @import "https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css";
 
+@font-face {
+  font-family: postFont;
+  src: url('../public/Dongle-Regular.ttf');
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input {
-    all: unset;
-    box-sizing: border-box;
-    appearance: none;
+  all: unset;
+  box-sizing: border-box;
+  appearance: none;
 }
 
 body {
-    background-color: black;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 14px;
-    color: white;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: rgb(13, 4, 4);
 }
 
 button {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 form {
-    width: 100%;
+  width: 100%;
 }
 
 .nweet-input::placeholder {
-    color: white;
-    opacity: 0.9;
+  color: white;
+  opacity: 0.9;
 }
 
 .container {
-    width: 100%;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .formInput {
-    width: 100%;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid black;
-    text-align: center;
-    background-color: white;
-    color: black;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  color: black;
 }
 
 .formBtn {
-    cursor: pointer;
-    width: 100%;
-    padding: 7px 20px;
-    text-align: center;
-    color: white;
-    border-radius: 20px;
-    background-color: #04aaff;
-    cursor: pointer;
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  background-color: #04aaff;
+  cursor: pointer;
 }
 
 .cancelBtn {
-    cursor: pointer;
-    background-color: tomato;
+  cursor: pointer;
+  background-color: tomato;
 }
+
+
 
 /* Profile Page */
 
 .profileForm {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-    padding-bottom: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .logOut {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 /* Nwitter Factory */
 
 .factoryForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .factoryInput__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .factoryInput__input {
-    flex-grow: 1;
-    height: 40px;
-    padding: 0px 20px;
-    color: white;
-    border: 1px solid #04aaff;
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: 12px;
+  flex-grow: 1;
+  height: 40px;
+  padding: 0px 20px;
+  color: white;
+  border: 1px solid #04aaff;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .factoryInput__arrow {
-    position: absolute;
-    right: 0;
-    background-color: #04aaff;
-    height: 40px;
-    width: 40px;
-    padding: 10px 0px;
-    text-align: center;
-    border-radius: 20px;
-    color: white;
+  position: absolute;
+  right: 0;
+  background-color: #04aaff;
+  height: 40px;
+  width: 40px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
 }
 
 .factoryInput__label {
-    color: #04aaff;
-    cursor: pointer;
+  color: #04aaff;
+  cursor: pointer;
 }
 
 .factoryInput__label span {
-    margin-right: 10px;
-    font-size: 12px;
+  margin-right: 10px;
+  font-size: 12px;
 }
 
 .factoryForm__attachment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .factoryForm__attachment img {
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
 }
 
 .factoryForm__clear {
-    color: #04aaff;
-    cursor: pointer;
-    text-align: center;
+  color: #04aaff;
+  cursor: pointer;
+  text-align: center;
 }
 
 .factoryForm__clear span {
-    margin-right: 10px;
-    font-size: 12px;
+  margin-right: 10px;
+  font-size: 12px;
 }
 
 /* Nweet */
 
 .nweetEdit .formBtn {
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .nweet {
-    margin-bottom: 20px;
-    background-color: white;
-    width: 100%;
-    max-width: 320px;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  background-color: white;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .nweet h4 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .nweet img {
-    right: -10px;
-    top: 20px;
-    position: absolute;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+  right: -10px;
+  top: 20px;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
 }
 
 .nweet__actions {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .nweet__actions span {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nweet__actions span:first-child {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* Auth */
 
 .authContainer {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .authBtns {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 10px;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  width: 150px;
 }
 
 .authBtn {
-    cursor: pointer;
-    border-radius: 20px;
-    border: none;
-    padding: 10px 0px;
-    font-size: 12px;
-    text-align: center;
-    width: 150px;
-    background: white;
-    cursor: pointer;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 0px;
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  width: 150px;
+  background: white;
+  cursor: pointer;
 }
 
 /* AuthForm */
 
 .authInput {
-    max-width: 320px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 1);
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: black;
+  max-width: 320px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: black;
 }
 
 .authSubmit {
-    text-align: center;
-    background: #04aaff;
-    color: white;
-    margin-top: 10px;
-    cursor: pointer;
+  text-align: center;
+  background: #1dbcb1;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+.authSignCancle {
+  text-align: center;
+  background: #1dbcb1;
+  color: white;
+  margin-bottom: 10px;
+  border: none;
+  width: 100px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.authSocial {
+  text-align: center;
+  background: #1dbcb1;
+  color: white;
+  margin-bottom: 10px;
+  border: none;
+  width: 200px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.authSignup {
+  text-align: center;
+  background: #1dbcb1;
+  color: white;
+  margin-bottom: 10px;
+  border: none;
+  width: 320px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 12px;
 }
 
 .authError {
-    color: tomato;
-    text-align: center;
-    font-weight: 500;
-    font-size: 12px;
+  color: tomato;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .authSwitch {
-    color: #04aaff;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    display: block;
-    font-size: 12px;
-    
-    text-decoration: underline;
+  color: #04aaff;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: block;
+  font-size: 12px;
+
+  text-decoration: underline;
+}
+
+.SignupContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSignup {
+  max-width: 320px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.replyButton {
+  position: absolute;
+  left: 10%;
+  cursor: pointer;
+  font-family: postFont;
+  font-size: 20px;
+
+}
+
+.keywordTest {
+  width: auto;
+  display: flex;
+  font-size: 25px;
+}
+
+.profileButton {
+  position: absolute;
+  bottom: 22%;
+  right: 10%;
+}
+
+.profileContent {
+  line-height: 4rem;
+  font-family: postFont;
+  font-size: 40px;
+}
+
+.profileBoxImg {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 4rem;
+  border: 0.2rem solid #000000;
+  margin-left: 2%;
+}
+
+.profileMainForm {
+  background-color: #ffffff71;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 2.6rem;
+  gap: 4.2rem;
+  border: 0.3rem solid #000000;
+  height: 300px;
+}
+
+.profileFeedForm {
+  overflow: scroll;
+  height: 300px;
+  border-radius: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.keywordRankForm {
+  padding-top: 12%;
+  padding-left: 10%;
+  font-family: postFont;
+  font-size: 20px;
+}
+
+.searchMenu {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /* 방향이 row 기준: 세로 중앙 정렬*/
+  height: 400px;
+  text-align: center;
+  padding-right: 200px;
+}
+
+.searchForm {
+  font-family: postFont;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  background-color: white;
+  width: 200%;
+  margin-left: 10%;
+}
+
+.createButton {
+  font-family: postFont;
+  background: #1dbcb1;
+  color: white;
+  border: none;
+  width: 80px;
+  border-radius: 30px;
+  font-size: 20px;
+
+
+}
+
+.createPost1 {
+  margin-top: 10%;
+}
+
+.createPost {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.keywordForm {
+  font-family: postFont;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  width: 100%;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.textForm {
+  font-family: postFont;
+  font-size: 25px;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.background {
+  background: #bcc1bf;
+  height: 735px;
+}
+
+.mainBox {
+  background: #bcc1bf;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+.letterBox {
+  flex-direction: column;
+  width: 550px;
+  ;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: postFont;
+  overflow-wrap: break-word;
+}
+
+.profileBox {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 4rem;
+  border: 0.2rem solid #000000;
+}
+
+nav {
+  border-radius: 0rem 7.6rem 18.25rem 0rem;
+  height: 832px;
+  width: 300px;
+  float: left;
+  position: fixed;
+  background: #3fb9af;
+  padding: 20px;
+}
+
+.feed {
+  position: relative;
+  background-color: #ffffff71;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 2.6rem;
+  gap: 4.2rem;
+  border: 0.3rem solid #000000;
+}
+
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* modal창 */
+.modalBody {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  padding: 40px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+}
+
+#modalCloseBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  font-size: 20px;
+}
+
+#modalCloseBtn:hover {
+  cursor: pointer;
+}
+
+.App {
+  text-align: center;
+  font-family: postFont;
+  font-size: 25px;
 }

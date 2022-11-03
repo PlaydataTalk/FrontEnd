@@ -8,12 +8,13 @@ import "firebase/firestore";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCbiHzkWlZiej_2Mxh81Gpxr2r-dXmWXPk",
-    authDomain: "playdatatalk-9ca66.firebaseapp.com",
-    projectId: "playdatatalk-9ca66",
-    storageBucket: "playdatatalk-9ca66.appspot.com",
-    messagingSenderId: "989090028421",
-    appId: "1:989090028421:web:7dd6a39b4705366b1a02ec"
+    apiKey: "AIzaSyAAm1ejAHBpaC0o5JMd9MO57mAE4Euszhk",
+    authDomain: "playdatatalk.firebaseapp.com",
+    projectId: "playdatatalk",
+    databaseURL: "https://playdatatalk-default-rtdb.firebaseio.com/",
+    storageBucket: "playdatatalk.appspot.com",
+    messagingSenderId: "957807197538",
+    appId: "1:957807197538:web:fafd94b0fe3db9021c003b"
 };
 const app = initializeApp(firebaseConfig);
 export const authService = getAuth();
